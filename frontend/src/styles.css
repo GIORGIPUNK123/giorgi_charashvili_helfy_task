@@ -1,0 +1,141 @@
+body {
+  background: #152331; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #000000,
+    #152331
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #000000,
+    #152331
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+}
+.heading {
+  margin-top: 50px;
+}
+.task-list {
+  /* margin-top: 200px; */
+  max-height: 636px;
+  gap: 12px;
+  display: flex;
+  flex-direction: column;
+}
+
+.carousel {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transform: translateY(-150px);
+}
+
+.carousel.slide-up,
+.carousel.slide-down {
+  transition: transform 0.4s ease;
+}
+
+.carousel.slide-up {
+  transform: translateY(-312px);
+}
+
+.carousel.slide-down {
+  transform: translateY(12px);
+}
+
+.carousel-wrapper {
+  overflow: hidden;
+  height: 496px;
+}
+.task-list-left {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.task-list-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.create-btn {
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  background: #2196f3;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition:
+    background-color 0.2s,
+    transform 0.2s;
+  white-space: nowrap;
+}
+.create-btn:hover {
+  background: #1976d2;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(33, 150, 243, 0.3);
+}
+.task-list-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.task-list-wrapper {
+  gap: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.task-list-buttons button {
+  color: white;
+  border: none;
+  flex: 1;
+  min-width: 140px;
+  max-width: 200px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition:
+    background-color 0.3s,
+    transform 0.2s;
+}
+.task-list-buttons .prev-btn {
+  background: #417199;
+}
+.task-list-buttons .next-btn {
+  background: #2196f3;
+}
+
+.task-list-buttons button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(33, 150, 243, 0.3);
+}
+.task-list-buttons .next-btn:hover {
+  background: #1976d2;
+}
+.task-list-buttons .prev-btn:hover {
+  background: #2e5574;
+}
+.loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  margin-top: 200px;
+  font-size: 46px;
+  color: #fff;
+}

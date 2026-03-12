@@ -1,0 +1,274 @@
+.delete-modal {
+  width: 420px;
+  padding: 40px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  color: #fff;
+  background: linear-gradient(135deg, #152331 0%, #1a2a3a 100%);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+  position: fixed;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  justify-content: center;
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -48%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.delete-modal h2 {
+  font-size: 28px;
+  margin: 0;
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: -0.3px;
+}
+
+.delete-modal button {
+  padding: 16px 32px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  min-height: 44px;
+  flex: 1;
+  max-width: 180px;
+}
+
+.delete-modal-btns {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.delete-modal .cancel {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.delete-modal .cancel:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.delete-modal .cancel:active {
+  transform: translateY(0);
+}
+
+.delete-modal .delete {
+  background: linear-gradient(135deg, #f44336 0%, #e53935 100%);
+  color: white;
+  border: none;
+}
+
+.delete-modal .delete:hover {
+  background: linear-gradient(135deg, #e53935 0%, #d32f2f 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(244, 67, 54, 0.4);
+}
+
+.delete-modal .delete:active {
+  transform: translateY(0);
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 28px;
+  color: rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  width: 40px;
+  height: 40px;
+}
+
+.close:hover {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  transform: scale(1.1);
+}
+
+/* ── Task Form Modal (create & edit) ────────────────────── */
+.task-form-modal {
+  width: 480px;
+  padding: 40px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  color: #fff;
+  background: linear-gradient(135deg, #152331 0%, #1a2a3a 100%);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+  position: fixed;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  animation: slideIn 0.3s ease-out;
+}
+
+.task-form-modal h2 {
+  font-size: 26px;
+  margin: 0;
+  font-weight: 600;
+}
+
+.task-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  text-align: left;
+}
+
+.form-group label {
+  font-size: 13px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.6);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.task-form-modal input,
+.task-form-modal textarea {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
+  color: #fff;
+  padding: 10px 12px;
+  width: 100%;
+  font-family: inherit;
+  font-size: 15px;
+  resize: none;
+  transition: border-color 0.2s;
+}
+
+.task-form-modal input::placeholder,
+.task-form-modal textarea::placeholder {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.task-form-modal input:focus,
+.task-form-modal textarea:focus {
+  outline: none;
+  border-color: #2196f3;
+}
+
+.priority-selector {
+  display: flex;
+  gap: 8px;
+}
+
+.priority-opt {
+  flex: 1;
+  padding: 8px 0;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.06);
+  color: rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: capitalize;
+  transition: all 0.2s;
+}
+
+.priority-opt:hover:not(.active) {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.35);
+  color: #fff;
+}
+
+.priority-opt.low.active {
+  background: #858785;
+  border-color: #858785;
+  color: #fff;
+}
+
+.priority-opt.medium.active {
+  background: #ff9800;
+  border-color: #ff9800;
+  color: #fff;
+}
+
+.priority-opt.high.active {
+  background: #f44336;
+  border-color: #f44336;
+  color: #fff;
+}
+
+.task-form-modal-btns {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 4px;
+  flex-wrap: wrap;
+}
+
+.task-form-modal-btns button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.2s;
+  min-height: 40px;
+}
+
+.task-form-modal .cancel {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.task-form-modal .cancel:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.task-form-modal .save {
+  background: #2196f3;
+  color: #fff;
+}
+
+.task-form-modal .save:hover {
+  background: #1976d2;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(33, 150, 243, 0.3);
+}
