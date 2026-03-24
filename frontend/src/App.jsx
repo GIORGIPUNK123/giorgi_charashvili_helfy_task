@@ -1,4 +1,3 @@
-import { useEffect, useState } from 'react';
 import { TaskList } from './components/TaskList';
 
 export const App = () => {
