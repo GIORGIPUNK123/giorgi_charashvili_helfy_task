@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from 'react';
 import { TaskItem } from './TaskItem';
-import { TaskOptions } from './taskOptions';
+import { TaskOptions } from './TaskOptions';
 import {
   createTask,
   deleteTask,
